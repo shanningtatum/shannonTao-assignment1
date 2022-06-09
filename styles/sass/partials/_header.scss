@@ -1,0 +1,50 @@
+header{
+
+  .wrapper{
+    height:100vh;
+    background-image:url(./../../assets/image-1.png);
+    background-size:cover;
+
+    h1{
+      font-family:'Iceberg';
+      text-align:center;
+      font-size:4rem;
+      margin:150px 40px auto;
+    }
+
+    span{
+      display:block;
+    }
+
+    h2{
+      font-family: 'Montserrat', sans-serif;
+      text-align:center;
+      background-color:$primaryPurple;
+      margin:0 auto;
+      width:25%;
+      padding:10px 20px;
+    }
+  
+    nav{
+      font-family:'Montserrat', sans-serif;
+      padding:20px;
+  
+      ul{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        width:30%;
+        margin:0 auto;
+        list-style:none;
+        
+        a{
+          text-transform:uppercase;
+          color:$primaryLight;
+          text-decoration:none;
+        }
+      }
+    }
+
+  }
+
+}

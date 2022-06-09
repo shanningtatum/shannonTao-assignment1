@@ -1,0 +1,54 @@
+@import './partials/variables';
+@import './partials/setup';
+@import './partials/header';
+
+html{
+  color:$primaryLight;
+  font-size:125%;
+}
+
+.about, .blog{
+  background-color:$primaryDark;
+
+  .wrapper{
+    display:flex;
+    flex-direction:row;
+  
+    .firstContainer, .secondContainer{
+      flex-basis:50%;
+    }
+  
+    img {
+      width:100%;
+    }
+    h2{
+      font-family:'Iceberg';
+      text-transform:uppercase;
+      margin:0 auto;
+    }
+    p{
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  a{
+    text-decoration:none;
+    font-family: 'Montserrat', sans-serif;
+    color:$primaryLight;
+    background-color:$primaryPurple;
+    padding:10px 15px;
+  }
+
+}
+
+.about {
+  .firstContainer{
+    padding:100px;
+  }
+}
+
+.blog{
+  .secondContainer{
+    padding:100px;
+  }
+}
