@@ -2,11 +2,10 @@
 @import './partials/setup';
 @import './partials/header';
 @import './partials/footer';
+@import './partials/about';
+@import './partials/tickets';
 
-html{
-  color:$primaryLight;
-  font-size:125%;
-}
+
 
 .readMore{
   text-decoration:none;
@@ -17,9 +16,18 @@ html{
   font-size:25px;
   line-height:29px;
   text-transform:uppercase;
+  transition: background-color 0.3s ease;
+
+    @media (max-width:540px){
+        margin:0 auto;
+    }
 }
 
 
+.readMore:hover{
+    transition: background-color 0.3s ease;
+    background-color:$secondaryPurple;
+}
 
 section{
     .wrapper{
@@ -36,62 +44,7 @@ section{
     }
 }
 
-.about{
-  background-color:$primaryDark;
 
-  .performingLineUp, .newExperiences{
-    display:flex;
-    flex-direction:row;
-
-    h2{
-      padding:0;
-      margin:0;
-    }
-
-    .firstContainer, .secondContainer{
-      flex-basis:50%;
-
-      img{
-        width:100%;
-      }
-    }
-    
-  }
-
-  .performingLineUp .firstContainer, .newExperiences .secondContainer{
-    padding:5%;
-  }
-
-}
-
-
-.tickets{
-    background-color:$secondaryDark;
-    
-    .wrapper{
-        display:flex;
-        flex-direction:row;
-
-        p{
-            font-family:'Montserrat',sans-serif;
-        }
-
-
-
-        .ticketImg{
-            width:25%;
-
-            img {
-            width:100%;
-            }
-        }
-
-        .ticketText{
-            width:calc(75% - 50px);
-            margin-left:50px;
-        }
-    }
-}
 
 .info{
     background-color:$secondaryPurple;
@@ -105,18 +58,32 @@ section{
         width:60%;
         margin: 50px auto;
 
+        @media (max-width:540px){
+            flex-direction:column;
+
+            li{
+                margin:20px;
+            }
+        }
+
         li{
-        text-transform:uppercase;
-        font-weight:bold;
-        display:flex;
-        flex-direction:column;
-        font-size:30px;
-        text-align:center;
+            text-transform:uppercase;
+            font-weight:bold;
+            display:flex;
+            flex-direction:column;
+            font-size:30px;
+            text-align:center;
         }
 
         a{
-        color:$primaryLight;
-        text-decoration:none;
+            color:$primaryLight;
+            text-decoration:none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover{
+            transition: color 0.3s ease;
+            color:$primaryDark;
         }
     }
 
@@ -148,41 +115,75 @@ section{
 
     .wrapper{
         padding:20px 100px;
-    }
 
-    h3{
-        font-family:'Iceberg';
-        text-transform:uppercase;
-    }
-
-    .navLinks{
-
-        ul{
-            display:flex;
-            flex-direction:row;
-            justify-content:space-evenly;
-            width:60%;
-            margin:20px auto;
-            list-style:none;
-
-            a{
-                text-decoration:none;
-                color:$primaryLight;
-                text-transform:uppercase;
-                font-weight:bold;
+        h3{
+            font-family:'Iceberg';
+            text-transform:uppercase;
+        }
+    
+        .navLinks{
+    
+            ul{
+                display:flex;
+                flex-direction:row;
+                justify-content:space-evenly;
+                width:60%;
+                margin:20px auto;
+                list-style:none;
+    
+                a{
+                    text-decoration:none;
+                    color:$primaryLight;
+                    text-transform:uppercase;
+                    font-weight:bold;
+                }
             }
         }
-    }
+    
+    
+        .extraInfo{
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
 
+            @media (max-width:540px){
+                flex-direction:column;
+                text-align:center;
 
-    .extraInfo{
-        display:flex;
-        flex-direction:row;
-        border:1px white solid;
-        justify-content:space-between;
+                button{
+                    width:100%;
+                }
+            }
+    
+            p{
+                margin:0;
+            }
 
-        p{
-            margin:0;
+            input{
+                border:none;
+                padding:5px 10px;
+            }
+
+            input::placeholder{
+                opacity:1;
+                color:$secondaryDark;
+            }
+            button{
+                border:none;
+                background-color:$primaryPurple;
+                color:$primaryLight;
+                font-family:'Iceberg';
+                padding:5px 10px;
+                text-transform:uppercase;
+            }
         }
+
     }
+
+    fieldset{
+        border:none;
+        padding:0;
+    }
+
+    
 }

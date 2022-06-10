@@ -1,0 +1,44 @@
+.about{
+  background-color:$primaryDark;
+
+  .performingLineUp, .newExperiences{
+    display:flex;
+    flex-direction:row;
+
+    
+    @media (max-width:540px){
+      flex-direction:column;
+    }
+
+    h2{
+      padding:0;
+      margin:0;
+    }
+
+    .firstContainer, .secondContainer{
+      flex-basis:50%;
+
+      @media (max-width:540px){
+        display:flex;
+        flex-direction:column;
+      }
+
+      img{
+        width:100%;
+      }
+    }
+    
+  }
+
+  .performingLineUp .firstContainer, .newExperiences .secondContainer{
+    padding:5%;
+  }
+  
+  .performingLineUp{
+    
+    @media (max-width:540px){
+      flex-direction:column-reverse;
+    }
+  }
+
+}

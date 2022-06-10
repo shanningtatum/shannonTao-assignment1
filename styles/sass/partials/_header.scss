@@ -1,3 +1,5 @@
+
+
 header{
 
   .wrapper{
@@ -17,6 +19,7 @@ header{
       line-height:80px;
       text-align:center;
       font-size:4rem;
+
     }
 
     h2{
@@ -24,15 +27,21 @@ header{
       text-align:center;
       background-color:$primaryPurple;
       margin:0 auto;
-      font-size:52px;
+      font-size:1.75rem;
       padding:10px 20px;
-      width:max-content;
+      max-width:max-content;
+      width:60%;
+
     }
   
     nav{
       display:flex;
       font-family:'Montserrat', sans-serif;
       padding:20px;
+
+      @media (max-width:540px){
+        display:none;
+      }
 
 
       ul{
@@ -47,18 +56,27 @@ header{
           text-transform:uppercase;
           color:$primaryLight;
           text-decoration:none;
+          transition: color 0.3s ease;
         }
+        
       }
     }
 
+    a:hover{
+      transition: color 0.3s ease;
+      color:$primaryPurple;
+    }
   }
-
 }
 
 .socialLinks {
   position:absolute;
   right:2%;
   top:30%;
+
+  @media (max-width:540px){
+    display:none;
+  }
 
   ul{
     display:flex;

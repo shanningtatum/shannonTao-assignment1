@@ -1,0 +1,36 @@
+.tickets{
+  background-color:$secondaryDark;
+  
+  
+  .wrapper{
+      display:flex;
+      flex-direction:row;
+
+      @media (max-width:540px){
+        flex-direction:column;
+      }
+
+      p{
+          font-family:'Montserrat',sans-serif;
+      }
+
+
+
+      .ticketImg{
+          flex-basis:25%;
+
+          img {
+          width:100%;
+          }
+      }
+
+      .ticketText{
+          flex-basis:calc(75% - 50px);
+          margin-left:50px;
+
+          @media (max-width:540px){
+            margin:0 auto;
+          }
+      }
+  }
+}

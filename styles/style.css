@@ -1,4 +1,9 @@
 html {
+  color: #FFF;
+  font-size: 125%;
+}
+
+html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -254,11 +259,12 @@ header .wrapper h2 {
   text-align: center;
   background-color: #9200FF;
   margin: 0 auto;
-  font-size: 52px;
+  font-size: 1.75rem;
   padding: 10px 20px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  width: 60%;
 }
 header .wrapper nav {
   display: -webkit-box;
@@ -266,6 +272,11 @@ header .wrapper nav {
   display: flex;
   font-family: "Montserrat", sans-serif;
   padding: 20px;
+}
+@media (max-width: 540px) {
+  header .wrapper nav {
+    display: none;
+  }
 }
 header .wrapper nav ul {
   display: -webkit-box;
@@ -286,12 +297,24 @@ header .wrapper nav ul a {
   text-transform: uppercase;
   color: #FFF;
   text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+header .wrapper a:hover {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  color: #9200FF;
 }
 
 .socialLinks {
   position: absolute;
   right: 2%;
   top: 30%;
+}
+@media (max-width: 540px) {
+  .socialLinks {
+    display: none;
+  }
 }
 .socialLinks ul {
   display: -webkit-box;
@@ -320,35 +343,6 @@ footer .wrapper {
   font-weight: bold;
 }
 
-html {
-  color: #FFF;
-  font-size: 125%;
-}
-
-.readMore {
-  text-decoration: none;
-  font-family: "Iceberg";
-  color: #FFF;
-  background-color: #9200FF;
-  padding: 10px 15px;
-  font-size: 25px;
-  line-height: 29px;
-  text-transform: uppercase;
-}
-
-section .wrapper {
-  padding: 5%;
-}
-section h2 {
-  font-family: "Iceberg";
-  text-transform: uppercase;
-  font-size: 52px;
-  margin: 0 auto;
-}
-section p {
-  font-family: "Montserrat", sans-serif;
-}
-
 .about {
   background-color: #0F0632;
 }
@@ -361,6 +355,14 @@ section p {
       -ms-flex-direction: row;
           flex-direction: row;
 }
+@media (max-width: 540px) {
+  .about .performingLineUp, .about .newExperiences {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .about .performingLineUp h2, .about .newExperiences h2 {
   padding: 0;
   margin: 0;
@@ -369,11 +371,30 @@ section p {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
+@media (max-width: 540px) {
+  .about .performingLineUp .firstContainer, .about .performingLineUp .secondContainer, .about .newExperiences .firstContainer, .about .newExperiences .secondContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .about .performingLineUp .firstContainer img, .about .performingLineUp .secondContainer img, .about .newExperiences .firstContainer img, .about .newExperiences .secondContainer img {
   width: 100%;
 }
 .about .performingLineUp .firstContainer, .about .newExperiences .secondContainer {
   padding: 5%;
+}
+@media (max-width: 540px) {
+  .about .performingLineUp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .tickets {
@@ -388,18 +409,70 @@ section p {
       -ms-flex-direction: row;
           flex-direction: row;
 }
+@media (max-width: 540px) {
+  .tickets .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .tickets .wrapper p {
   font-family: "Montserrat", sans-serif;
 }
 .tickets .wrapper .ticketImg {
-  width: 25%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
 }
 .tickets .wrapper .ticketImg img {
   width: 100%;
 }
 .tickets .wrapper .ticketText {
-  width: calc(75% - 50px);
+  -ms-flex-preferred-size: calc(75% - 50px);
+      flex-basis: calc(75% - 50px);
   margin-left: 50px;
+}
+@media (max-width: 540px) {
+  .tickets .wrapper .ticketText {
+    margin: 0 auto;
+  }
+}
+
+.readMore {
+  text-decoration: none;
+  font-family: "Iceberg";
+  color: #FFF;
+  background-color: #9200FF;
+  padding: 10px 15px;
+  font-size: 25px;
+  line-height: 29px;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 540px) {
+  .readMore {
+    margin: 0 auto;
+  }
+}
+
+.readMore:hover {
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  background-color: #3D0369;
+}
+
+section .wrapper {
+  padding: 5%;
+}
+section h2 {
+  font-family: "Iceberg";
+  text-transform: uppercase;
+  font-size: 52px;
+  margin: 0 auto;
+}
+section p {
+  font-family: "Montserrat", sans-serif;
 }
 
 .info {
@@ -418,6 +491,17 @@ section p {
   width: 60%;
   margin: 50px auto;
 }
+@media (max-width: 540px) {
+  .info ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .info ul li {
+    margin: 20px;
+  }
+}
 .info ul li {
   text-transform: uppercase;
   font-weight: bold;
@@ -434,6 +518,13 @@ section p {
 .info ul a {
   color: #FFF;
   text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.info ul a:hover {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  color: #0F0632;
 }
 
 .gallery {
@@ -463,11 +554,11 @@ section p {
 .contact .wrapper {
   padding: 20px 100px;
 }
-.contact h3 {
+.contact .wrapper h3 {
   font-family: "Iceberg";
   text-transform: uppercase;
 }
-.contact .navLinks ul {
+.contact .wrapper .navLinks ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -482,13 +573,13 @@ section p {
   margin: 20px auto;
   list-style: none;
 }
-.contact .navLinks ul a {
+.contact .wrapper .navLinks ul a {
   text-decoration: none;
   color: #FFF;
   text-transform: uppercase;
   font-weight: bold;
 }
-.contact .extraInfo {
+.contact .wrapper .extraInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -496,11 +587,58 @@ section p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px white solid;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.contact .extraInfo p {
+@media (max-width: 540px) {
+  .contact .wrapper .extraInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .contact .wrapper .extraInfo button {
+    width: 100%;
+  }
+}
+.contact .wrapper .extraInfo p {
   margin: 0;
+}
+.contact .wrapper .extraInfo input {
+  border: none;
+  padding: 5px 10px;
+}
+.contact .wrapper .extraInfo input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #08080B;
+}
+.contact .wrapper .extraInfo input::-moz-placeholder {
+  opacity: 1;
+  color: #08080B;
+}
+.contact .wrapper .extraInfo input:-ms-input-placeholder {
+  opacity: 1;
+  color: #08080B;
+}
+.contact .wrapper .extraInfo input::-ms-input-placeholder {
+  opacity: 1;
+  color: #08080B;
+}
+.contact .wrapper .extraInfo input::placeholder {
+  opacity: 1;
+  color: #08080B;
+}
+.contact .wrapper .extraInfo button {
+  border: none;
+  background-color: #9200FF;
+  color: #FFF;
+  font-family: "Iceberg";
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+.contact fieldset {
+  border: none;
+  padding: 0;
 }
