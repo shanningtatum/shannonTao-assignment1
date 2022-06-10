@@ -276,9 +276,9 @@ header .wrapper nav ul {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 30%;
   list-style: none;
 }
@@ -336,17 +336,20 @@ html {
   text-transform: uppercase;
 }
 
-section .wrapper h2 {
+section h2 {
   font-family: "Iceberg";
   text-transform: uppercase;
   font-size: 52px;
   margin: 0 auto;
 }
+section p {
+  font-family: "Montserrat", sans-serif;
+}
 
-.about, .blog {
+.about {
   background-color: #0F0632;
 }
-.about .wrapper, .blog .wrapper {
+.about .performingLineUp, .about .newExperiences {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,23 +358,16 @@ section .wrapper h2 {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-.about .wrapper .firstContainer, .about .wrapper .secondContainer, .blog .wrapper .firstContainer, .blog .wrapper .secondContainer {
+.about .performingLineUp h2, .about .newExperiences h2 {
+  padding: 0;
+  margin: 0;
+}
+.about .performingLineUp .firstContainer, .about .performingLineUp .secondContainer, .about .newExperiences .firstContainer, .about .newExperiences .secondContainer {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
-.about .wrapper img, .blog .wrapper img {
+.about .performingLineUp .firstContainer img, .about .performingLineUp .secondContainer img, .about .newExperiences .firstContainer img, .about .newExperiences .secondContainer img {
   width: 100%;
-}
-.about .wrapper p, .blog .wrapper p {
-  font-family: "Montserrat", sans-serif;
-}
-
-.about .firstContainer {
-  padding: 100px;
-}
-
-.blog .secondContainer {
-  padding: 100px;
 }
 
 .tickets .wrapper {
@@ -382,9 +378,10 @@ section .wrapper h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 100px;
+  background-color: #08080B;
 }
 .tickets .wrapper .topContainer {
-  background-color: #08080B;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -402,14 +399,15 @@ section .wrapper h2 {
 .tickets .wrapper .topContainer img {
   width: 100%;
 }
-.tickets .wrapper .bottomContainer {
+
+.info .wrapper {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   background-color: #3D0369;
   padding: 20px;
   font-family: "Montserrat", sans-serif;
 }
-.tickets .wrapper .bottomContainer ul {
+.info .wrapper ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,7 +418,7 @@ section .wrapper h2 {
   width: 60%;
   margin: 50px auto;
 }
-.tickets .wrapper .bottomContainer ul li {
+.info .wrapper ul li {
   text-transform: uppercase;
   font-weight: bold;
   display: -webkit-box;
@@ -433,14 +431,14 @@ section .wrapper h2 {
   font-size: 30px;
   text-align: center;
 }
-.tickets .wrapper .bottomContainer ul a {
+.info .wrapper ul a {
   color: #FFF;
   text-decoration: none;
 }
 
 .gallery .wrapper {
   background-color: #0F0632;
-  padding: 20px;
+  padding: 100px;
 }
 .gallery .wrapper h2 {
   text-align: center;
@@ -458,8 +456,46 @@ section .wrapper h2 {
 
 .contact .wrapper {
   background-color: #3D0369;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 .contact .wrapper h3 {
   font-family: "Iceberg";
   text-transform: uppercase;
+}
+.contact .navLinks ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 60%;
+  margin: 20px auto;
+  list-style: none;
+}
+.contact .navLinks ul a {
+  text-decoration: none;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.contact .extraInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px white solid;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.contact .extraInfo p {
+  margin: 0;
 }
