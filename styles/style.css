@@ -273,7 +273,7 @@ header .wrapper nav {
   font-family: "Montserrat", sans-serif;
   padding: 20px;
 }
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   header .wrapper nav {
     display: none;
   }
@@ -311,7 +311,7 @@ header .wrapper a:hover {
   right: 2%;
   top: 30%;
 }
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   .socialLinks {
     display: none;
   }
@@ -355,7 +355,7 @@ footer .wrapper {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   .about .performingLineUp, .about .newExperiences {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -371,7 +371,7 @@ footer .wrapper {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   .about .performingLineUp .firstContainer, .about .performingLineUp .secondContainer, .about .newExperiences .firstContainer, .about .newExperiences .secondContainer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -388,7 +388,7 @@ footer .wrapper {
 .about .performingLineUp .firstContainer, .about .newExperiences .secondContainer {
   padding: 5%;
 }
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   .about .performingLineUp {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -409,7 +409,7 @@ footer .wrapper {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   .tickets .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -432,9 +432,16 @@ footer .wrapper {
       flex-basis: calc(75% - 50px);
   margin-left: 50px;
 }
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   .tickets .wrapper .ticketText {
-    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -450,7 +457,7 @@ footer .wrapper {
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   .readMore {
     margin: 0 auto;
   }
@@ -490,8 +497,9 @@ section p {
           justify-content: space-between;
   width: 60%;
   margin: 50px auto;
+  padding: 0;
 }
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   .info ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -518,6 +526,7 @@ section p {
 .info ul a {
   color: #FFF;
   text-decoration: none;
+  margin: 10px;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
@@ -569,9 +578,8 @@ section p {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 60%;
-  margin: 20px auto;
   list-style: none;
+  padding: 0;
 }
 .contact .wrapper .navLinks ul a {
   text-decoration: none;
@@ -591,7 +599,7 @@ section p {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   .contact .wrapper .extraInfo {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -599,16 +607,10 @@ section p {
             flex-direction: column;
     text-align: center;
   }
-  .contact .wrapper .extraInfo button {
-    width: 100%;
-  }
-}
-.contact .wrapper .extraInfo p {
-  margin: 0;
 }
 .contact .wrapper .extraInfo input {
   border: none;
-  padding: 5px 10px;
+  padding: 10px 20px;
 }
 .contact .wrapper .extraInfo input::-webkit-input-placeholder {
   opacity: 1;
@@ -635,10 +637,16 @@ section p {
   background-color: #9200FF;
   color: #FFF;
   font-family: "Iceberg";
-  padding: 5px 10px;
+  padding: 10px 20px;
   text-transform: uppercase;
 }
 .contact fieldset {
   border: none;
   padding: 0;
+}
+@media (max-width: 768px) {
+  .contact fieldset input, .contact fieldset button {
+    width: 100%;
+    margin: 10px 0;
+  }
 }

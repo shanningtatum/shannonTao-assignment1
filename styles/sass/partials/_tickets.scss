@@ -6,8 +6,9 @@
       display:flex;
       flex-direction:row;
 
-      @media (max-width:540px){
+      @media (max-width:768px){
         flex-direction:column;
+        
       }
 
       p{
@@ -25,11 +26,15 @@
       }
 
       .ticketText{
+
           flex-basis:calc(75% - 50px);
           margin-left:50px;
 
-          @media (max-width:540px){
-            margin:0 auto;
+          @media (max-width:768px){
+            display:flex;
+            margin:0px;
+            flex-direction:column;
+
           }
       }
   }

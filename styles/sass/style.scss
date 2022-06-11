@@ -18,11 +18,10 @@
   text-transform:uppercase;
   transition: background-color 0.3s ease;
 
-    @media (max-width:540px){
+    @media (max-width:768px){
         margin:0 auto;
     }
 }
-
 
 .readMore:hover{
     transition: background-color 0.3s ease;
@@ -57,13 +56,15 @@ section{
         justify-content:space-between;
         width:60%;
         margin: 50px auto;
+        padding:0;
 
-        @media (max-width:540px){
+        @media (max-width:768px){
             flex-direction:column;
 
             li{
                 margin:20px;
             }
+
         }
 
         li{
@@ -78,6 +79,7 @@ section{
         a{
             color:$primaryLight;
             text-decoration:none;
+            margin:10px;
             transition: color 0.3s ease;
         }
 
@@ -127,9 +129,8 @@ section{
                 display:flex;
                 flex-direction:row;
                 justify-content:space-evenly;
-                width:60%;
-                margin:20px auto;
                 list-style:none;
+                padding:0;
     
                 a{
                     text-decoration:none;
@@ -146,22 +147,15 @@ section{
             flex-direction:row;
             justify-content:space-between;
 
-            @media (max-width:540px){
+            @media (max-width:768px){
                 flex-direction:column;
                 text-align:center;
 
-                button{
-                    width:100%;
-                }
-            }
-    
-            p{
-                margin:0;
             }
 
             input{
                 border:none;
-                padding:5px 10px;
+                padding:10px 20px;
             }
 
             input::placeholder{
@@ -173,7 +167,7 @@ section{
                 background-color:$primaryPurple;
                 color:$primaryLight;
                 font-family:'Iceberg';
-                padding:5px 10px;
+                padding:10px 20px;
                 text-transform:uppercase;
             }
         }
@@ -183,6 +177,14 @@ section{
     fieldset{
         border:none;
         padding:0;
+
+        @media (max-width:768px){
+            input, button{
+                width:100%;
+                margin:10px 0;
+            }
+        }
+        
     }
 
     
