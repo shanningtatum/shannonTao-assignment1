@@ -7,6 +7,10 @@ $secondaryDark:#08080B;
 html{
   color:$primaryLight;
   font-size:125%;
+
+  @media (max-width:768px){
+    font-size:100%;
+  }
 }
 
 

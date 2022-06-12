@@ -2,6 +2,11 @@ html {
   color: #FFF;
   font-size: 125%;
 }
+@media (max-width: 768px) {
+  html {
+    font-size: 100%;
+  }
+}
 
 html {
   line-height: 1.15;
@@ -290,8 +295,9 @@ header .wrapper nav ul {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 30%;
+  width: 50%;
   list-style: none;
+  padding: 0;
 }
 header .wrapper nav ul a {
   text-transform: uppercase;
