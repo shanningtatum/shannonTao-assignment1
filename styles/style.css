@@ -501,7 +501,7 @@ section p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 60%;
+  width: 50%;
   margin: 50px auto;
   padding: 0;
 }
@@ -585,6 +585,8 @@ section p {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   list-style: none;
+  width: 60%;
+  margin: 0 auto;
   padding: 0;
 }
 .contact .wrapper .navLinks ul a {
